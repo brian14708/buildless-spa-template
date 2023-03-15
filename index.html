@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sample Application</title>
+    <meta name="description" content="Sample Application" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/roboto@4/index.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@5/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <v-layout>
+        <v-app-bar color="primary">
+          <template v-slot:prepend>
+            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+          </template>
+
+          <v-app-bar-title>Sample</v-app-bar-title>
+
+          <template v-slot:append>
+            <v-btn icon="mdi-dots-vertical"></v-btn>
+          </template>
+        </v-app-bar>
+
+        <v-main>
+          <v-btn @click="count++">Count: {{ count }}</v-btn>
+        </v-main>
+      </v-layout>
+    </div>
+
+    <template> asdf </template>
+
+    <script
+      async
+      src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+    ></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://cdn.jsdelivr.net/npm/vue@3/dist/vue.esm-browser.prod.js",
+          "vuetify": "https://cdn.jsdelivr.net/npm/vuetify@3/dist/vuetify.esm.min.js",
+          "@/": "./js/"
+        }
+      }
+    </script>
+    <script type="module">
+      import "@/app.js";
+    </script>
+  </body>
+</html>
